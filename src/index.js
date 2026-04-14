@@ -116,3 +116,14 @@ form.addEventListener("submit", (e) => {
 
 });    
 
+const radioOptions = document.querySelectorAll(".radio-option");
+
+
+
+
+radioOptions.forEach(option => {
+    option.addEventListener("click", () => {
+        const radio = option.querySelector('input[type="radio"]');
+        radio.checked = true
+    })
+})
