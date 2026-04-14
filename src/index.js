@@ -20,7 +20,7 @@ window.addEventListener('resize', adjustRows);
 const form = document.querySelector('form');
 const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="checkbox"]');
 const radios = form.querySelectorAll('input[type="radio"]');
-const checkbox = form.querySelector('input[type="checkbox"]');
+const successMessage = document.querySelector("#success");
 
 
 const checkingInputs = () => {
@@ -83,14 +83,36 @@ else {
 return isError;
 }
 
+const successShowingUp = () => {
+    successMessage.classList.remove("hide");
+
+    setTimeout(() => {
+         successMessage.classList.remove("hide");
+    }, 5000)
+}
+
+
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const hasErrorOnTexts = checkingInputs();
     const hasErrorOnTextarea = checkingTextarea();
     const hasErrorOnRadios = checkingRadioButtons();
-    if (!hasErrorOnTexts && !hasErrorOnTextarea && !hasErrorOnRadios && !hasErrorOnCheckbox) {
-        // form.submit();
+    if (!hasErrorOnTexts && !hasErrorOnTextarea && !hasErrorOnRadios) {
+        
+       
+   setTimeout(() => {
+            successMessage.classList.remove("hide");
+        }, 2000)
+    setTimeout(() => {
+            successMessage.classList.add("hide");
+            // form.submit()
+            
+        }, 7000)
+       
+        
     }
     
 
 });    
+

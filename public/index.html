@@ -10,30 +10,41 @@
   <title>Frontend Mentor | Contact form</title>
 
 </head>
-<body class="bg-light-green">
+
+
+<body class="bg-light-green relative min-h-screen">
+
+  <div id="success" class="hide bg-dark-grey text-white p-6 max-w-125 rounded-[0.625rem] fixed top-6 left-1/2 -translate-x-1/2">
+  <div class="grid grid-cols-[auto_1fr] items-center gap-x-2 gap-y-3">
+<img src="../assets/images/icon-success-check.svg" alt="Success Icon" width="20" height="21">
+<h1 class="text-lg font-semibold">Message Sent!</h1>
+<h2 class="col-span-2 font-light">Thanks for completing the form. We'll be in touch soon!</h2>
+  </div>
+</div>
+
 
 
     <form novalidate method="" action="">
-<div class="rounded-2xl p-4 max-w-83 md:max-w-162.5 mx-auto my-12 flex flex-col bg-white md:p-8">
+<div class="rounded-2xl p-4 max-w-83 md:max-w-162.5 mx-auto mt-34 mb-12 flex flex-col bg-white md:p-8">
      <h1 class="font-semibold text-3xl p-2 mb-4 text-h1-color">Contact Us</h1>
     
     <div class="md:grid md:grid-cols-[1fr_1fr]">
     
     <div class="flex flex-col p-2 space-y-2 w-full">
     <label class="mb-2" for="first-name">First Name <sup>*</sup></label>
-    <input pattern="^[\p{L}]+(?:[\s-'][\p{L}]+)*$" required type="text" id="first-name"/>
+    <input pattern="^[\p{L}]+(?:[\s'\-][\p{L}]+)*$" required type="text" id="first-name"/>
     <span class="error-message"></span>
     </div>
     <div class="flex flex-col p-2 space-y-2 w-full">
     <label class="mb-2" for="last-name">Last Name <sup>*</sup></label>
-    <input required pattern="^[\p{L}]+(?:[\s-'][\p{L}]+)*$" type="text" id="last-name">
+    <input required pattern="^[\p{L}]+(?:[\s'\-][\p{L}]+)*$" type="text" id="last-name">
     <span class="error-message"></span>
     </div>
      </div>
     
      <div class="flex flex-col p-2 space-y-2">
     <label class="mb-2" for="email">Email Address</label>
-    <input pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required type="email" id="email" data-error="Please enter a valid email address">
+    <input pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required type="email" id="email" data-error="Please enter a valid email address">
     <span class="error-message"></span>
    
     </div>
@@ -77,8 +88,8 @@
   
  
   <footer class="attribution text-center p-4">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Fortunat Hitantsoa Alexandre</a></p>
+    <p>Challenge by <a class="font-extrabold" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a class="font-extrabold" href="https://github.com/Alexandredark-glitch" target="_blank">Fortunat Hitantsoa Alexandre and made with ❤️</a></p>
   </footer>
 <script src="/src/index.js"></script>
 </body>
