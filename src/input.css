@@ -1,0 +1,81 @@
+ @import "tailwindcss";
+
+ @font-face {
+    font-family: 'Karla';
+    src: url(../fonts/Karla-VariableFont_wght.ttf) format('truetype');
+ }
+
+ @theme {
+    --color-light-green: hsl(148, 38%, 91%);
+    --color-h1-color: hsl(187, 24%, 22%);
+    --color-border-color: hsl(186, 15%, 59%);
+    --color-medium-green:  hsl(169, 82%, 27%);
+    --color-red: hsl(0, 66%, 54%);
+ }
+ span, textarea {
+    display: block;
+ }
+ span {
+    color: var(--color-red);
+    font-size: 0.775rem;
+    font-weight: 500;
+ }
+
+input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--color-medium-green);
+    
+}
+input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--color-medium-green);
+}     
+ body {
+    font-family: 'Karla', sans-serif;
+    
+ }
+
+ input[type="text"], input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border-color);
+    border-radius: 0.625rem;
+    cursor: pointer;
+ }
+
+ sup {
+    color: var(--color-medium-green)
+ }
+
+  .radio-option:has(input[type="radio"]:checked) {
+      background-color: var(--color-light-green);
+      border: 1px solid var(--color-medium-green);
+    }
+
+    .radio-option input[type="radio"],
+  .radio-option label {
+    cursor: pointer;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-medium-green);
+  }
+
+  .radio-option:hover {
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color:  hsl(187, 24%, 22%);
+  }
+  input[type="checkbox"], label[for="consentment"] {
+    cursor: pointer;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: 1px solid var(--color-medium-green);
+  }
