@@ -83,13 +83,6 @@ else {
 return isError;
 }
 
-const successShowingUp = () => {
-    successMessage.classList.remove("hide");
-
-    setTimeout(() => {
-         successMessage.classList.remove("hide");
-    }, 5000)
-}
 
 
 
@@ -117,8 +110,6 @@ form.addEventListener("submit", (e) => {
 });    
 
 const radioOptions = document.querySelectorAll(".radio-option");
-
-
 
 
 radioOptions.forEach(option => {
